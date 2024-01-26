@@ -6,7 +6,7 @@ interface User {
 }
 
 const UsersPage = async () => {
-  const res = await fetch('http://jsonplaceholder.typicode.com/users'); //res is the response
+  const res = await fetch('http://jsonplaceholder.typicode.com/users', { cache: 'no-store' }); //res is the response, cache no store removes the caching aka temp data, you can also use next: { revalidate: 10 } seconds
   const users: User[] = await res.json(); //uses the typescript to identify each property and translates it to json format
   return (
     <>

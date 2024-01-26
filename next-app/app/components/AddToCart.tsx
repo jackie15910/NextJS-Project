@@ -1,6 +1,8 @@
 'use client';
 import React from 'react'
 
+//This is all client side for interactivity with the button
+
 const AddToCart = () => {
   return (
     <div>
